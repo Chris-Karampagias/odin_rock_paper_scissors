@@ -1,1 +1,1 @@
-# odin_rock_paper_scissors
+This is the first edition of the Rock Paper Scissors project from The Odin Project's curriculum. GUI has not been implemented yet.
