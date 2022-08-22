@@ -10,6 +10,11 @@ function getComputerChoice() {
     }
 }
 
+function getPlayerChoice() {
+    let answer = prompt("Rock, Paper or Scissors?").toLowerCase();
+    return answer;
+}
+
 function playRound (playerSelection,computerSelection)
 {
     if (playerSelection == computerSelection ){
