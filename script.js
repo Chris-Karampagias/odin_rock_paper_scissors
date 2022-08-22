@@ -18,18 +18,54 @@ function getPlayerChoice() {
 function playRound (playerSelection,computerSelection)
 {
     if (playerSelection == computerSelection ){
-        return "It's a tie!";
+        alert("It's a tie!");
+        return "Tie";
     }else if (playerSelection == "rock" && computerSelection == "paper"){
-        return "You Lose! Paper beats Rock";
+        alert("You Lose! Paper beats Rock");
+        return "Defeat";
     }else if (playerSelection == "rock" && computerSelection == "scissors"){
-        return "You Win! Rock beats Scissors";
+        alert("You Win! Rock beats Scissors");
+        return "Victory";
     }else if (playerSelection == "paper" && computerSelection == "rock"){
-        return "You Win! Paper beats Rock";
+        alert("You Win! Paper beats Rock");
+        return "Victory";
     }else if (playerSelection == "paper" && computerSelection == "scissors"){
-        return "You Lose! Scissors beat Paper"
+        alert("You Lose! Scissors beat Paper");
+        return "Defeat";
     }else if (playerSelection == "scissors" && computerSelection == "paper"){
-        return "You Win! Scissors beat Paper";
+        alert("You Win! Scissors beat Paper");
+        return "Victory";
     }else if (playerSelection == "scissors" && computerSelection == "rock"){
-        return "You Lose! Rock beats Scissors";
+        alert("You Lose! Rock beats Scissors");
+        return "Defeat";
+    }
+}
+
+function game() {
+    let playerWins = 0;
+    let computerWins = 0;
+    for (let i = 0; i < 5; i++){
+        playerSelection = getPlayerChoice();
+        computerSelection = getComputerChoice();
+        outcome = playRound(playerSelection,computerSelection);
+        switch (outcome){
+            case "Tie":
+                ++playerWins;
+                ++computerWins;
+                break;
+            case "Defeat":
+                ++computerWins;
+                break;
+            case "Victory":
+                ++playerWins;
+                break;
+        }
+    }
+    if (playerWins > computerWins){
+        alert("You won!");
+    }else if (playerWins < computerWins) {
+        alert("You lost!");
+    }else {
+        alert("It's a tie!");
     }
 }
