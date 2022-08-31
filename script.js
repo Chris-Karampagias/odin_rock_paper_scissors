@@ -1,22 +1,11 @@
-function getComputerChoice() {
-    let num = Math.floor(Math.random() * 3);
-    switch (num){
-        case 0:
-            return "rock";
-        case 1:
-            return "paper";
-        case 2:
-            return "scissors";
-    }
-}
-
-function getPlayerChoice() {
+/* function getPlayerChoice() {
     let answer = prompt("Rock, Paper or Scissors?").toLowerCase();
     return answer;
-}
+} */
 
-function playRound (playerSelection,computerSelection)
-{
+function playRound(button){
+    computerSelection = getComputerChoice();
+    playerSelection = getPlayerChoice(button);
     if (playerSelection == computerSelection ){
         alert("It's a tie!");
         return "Tie";
@@ -41,7 +30,36 @@ function playRound (playerSelection,computerSelection)
     }
 }
 
-function game() {
+function getComputerChoice() {
+    let num = Math.floor(Math.random() * 3);
+    switch (num){
+        case 0:
+            return "rock";
+        case 1:
+            return "paper";
+        case 2:
+            return "scissors";
+    }
+}
+
+function getPlayerChoice(button) {
+    if (button.target.textContent == 'Rock'){
+        playerSelection = "rock";
+    }else if (button.target.textContent == "Paper"){
+        playerSelection = "paper";
+    }else{
+        playerSelection = "scissors";
+    }
+    return playerSelection;
+}
+
+const btns = document.querySelectorAll('button');
+btns.forEach(button => {
+    button.addEventListener('click', playRound);
+})
+
+
+/*   function game() {
     let playerWins = 0;
     let computerWins = 0;
     for (let i = 0; i < 5; i++){
@@ -70,4 +88,4 @@ function game() {
     }
 }
 
-game()
+game()*/
