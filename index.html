@@ -6,11 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button id = "rock">Rock</button>
-    <button id = "paper">Paper</button>
-    <button id = "scissors">Scissors</button>
-    <div id = "results"></div>
+    <div class = "container">
+        <button id = "rock" class = "grow"><img src="images/rock.webp"></button>
+        <button id = "paper" class = "grow"><img src="images/old-scroll-paper_108964-329.webp"></button>
+        <button id = "scissors" class = "grow"><img src="images/istockphoto-1329468293-170667a.jpg"></button>
+    </div>
+    <div class = "feedback">
+        <div id = "message"></div>
+        <div id = "player-score"></div>
+        <div id = "computer-score"></div>
+        <div id ="result"></div>
+    </div>
 </body>
 </html>
