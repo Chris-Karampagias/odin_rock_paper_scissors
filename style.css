@@ -27,11 +27,13 @@ button{
     width:200px;
     height:200px;
     background-color: white;
+    padding: 0;
 }
 
 img{
-    width: 170px;
-    height: auto;
+    width: 196px;
+    height: 196px;
+    border-radius: 7px;
 }
 
 .grow:hover{
