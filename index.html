@@ -9,16 +9,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class = "container">
-        <button  class = "grow"><img id = "rock" src="images/rock.webp"></button>
-        <button  class = "grow"><img id = "paper" src="images/old-scroll-paper_108964-329.webp"></button>
-        <button  class = "grow"><img id = "scissors" src="images/istockphoto-1329468293-170667a.jpg"></button>
+    <div class = "imageContainer">
+        <button  class = "grow rock"><img class = "rock" src="images/rock.webp"></button>
+        <button  class = "grow paper"><img class = "paper" src="images/old-scroll-paper_108964-329.webp"></button>
+        <button  class = "grow scissors"><img class = "scissors" src="images/istockphoto-1329468293-170667a.jpg"></button>
     </div>
-    <div class = "feedback">
-        <div id = "message"></div>
-        <div id = "player-score"></div>
-        <div id = "computer-score"></div>
-        <div id ="result"></div>
+    <div class = "feedbackContainer">
+        <div class = "feedback">
+            <div id = "player-score">Player Score : 0</div>
+            <div id = "computer-score">Computer Score : 0</div>
+        </div>
+        <div class = "computerChoice">
+            <div id ="choice">Computer's Choice</div>
+        </div>
+    </div>
+    <div class = "resultContainer">
+        <div id = "#result"></div>
     </div>
 </body>
 </html>
