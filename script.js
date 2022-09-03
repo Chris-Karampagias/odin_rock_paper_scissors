@@ -5,7 +5,6 @@ const playerScore = document.querySelector("#player-score");
 const computerScore = document.querySelector("#computer-score");
 const result = document.querySelector("#result");
 const buttons = document.querySelectorAll(".grow");
-const choiceContainer = document.querySelector(".computerChoice");
 const resultContainer = document.querySelector(".resultContainer");
 const roundResult = document.querySelector("#roundResult");
 buttons.forEach(button => button.addEventListener("click",playGame));
