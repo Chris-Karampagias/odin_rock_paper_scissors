@@ -5,15 +5,29 @@ body{
     background-color:rgb(174, 234, 232);
 }
 
-.container {
+.imageContainer {
     display:flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
 }
 
+.feedbackContainer{
+    display: flex;
+    justify-content: space-around;
+}
+
+.computerChoice,
 .feedback{
     display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.resultContainer{
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -24,10 +38,16 @@ button{
     font-size: 60px;
     border-radius: 7px;
     cursor:pointer;
-    width:200px;
-    height:200px;
+    width: 200px;
+    height: 200px;
     background-color: white;
     padding: 0;
+}
+
+#confirmation {
+    height: 60px;
+    width: 200px;
+    font-size: 20px;
 }
 
 img{
@@ -45,8 +65,7 @@ img{
     }
 
 div{
-    font-size :40px;
-    white-space :pre;
+    font-size: 40px;
 }
 
 #score {
@@ -54,6 +73,7 @@ div{
     justify-content: flex-start;
 }
 
+#roundResult,
 #result{
     color:red;
 }
