@@ -12,6 +12,7 @@ buttons.forEach(button => button.addEventListener("click",playGame));
 
 function getComputerChoice() {
     let num = Math.floor(Math.random() * 3);
+    console.log(num);
     switch (num){
         case 0:
             return "rock";
@@ -36,7 +37,6 @@ function getPlayerChoice(button) {
 function playRound(playerSelection,computerSelection){  
     if (playerSelection == computerSelection ){
         roundResult.textContent = "Tie!";
-        return "Tie";
     }else if (playerSelection == "rock" && computerSelection == "paper"){
         roundResult.textContent = "You Lose!";
         return "Defeat";
@@ -60,12 +60,6 @@ function playRound(playerSelection,computerSelection){
 
 function addPoints(outcome){
     switch (outcome) {
-        case "Tie":
-            playerWins++;
-            computerWins++;
-            playerScore.textContent = `Player Score : ${playerWins}`;
-            computerScore.textContent = `Computer Score : ${computerWins}`;
-            break;
         case "Victory":
             playerWins++;
             playerScore.textContent = `Player Score : ${playerWins}`;
