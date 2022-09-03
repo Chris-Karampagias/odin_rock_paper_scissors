@@ -50,6 +50,10 @@ button{
     font-size: 20px;
 }
 
+#choice {
+    margin-bottom:auto;
+}
+
 img{
     width: 196px;
     height: 196px;
@@ -76,4 +80,9 @@ div{
 #roundResult,
 #result{
     color:red;
+}
+
+#imageChoice{
+    background-color: white;
+    border: 3px solid black;
 }
