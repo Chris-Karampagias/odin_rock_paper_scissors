@@ -112,6 +112,23 @@ if (playerWins < computerWins){
     }
 }
 
+function showComputerChoice(computerSelection) {
+    choiceImage = document.querySelector("#imageChoice");
+    if (computerSelection == "rock"){
+        choiceImage.setAttribute("src","images/rock.webp");
+    }else if (computerSelection == "paper"){
+        choiceImage.setAttribute("src","images/old-scroll-paper_108964-329.webp");
+    }else {
+        choiceImage.setAttribute("src","images/istockphoto-1329468293-170667a.jpg");
+    }
+}
+
+function hideComputerChoice(){
+    choiceImage = document.querySelector("#imageChoice");
+    choiceImage.removeAttribute("src");
+}
+
+
 function playGame(e) {
     if (i == 0) {initializeGame()};
     if (i > 1) {hideComputerChoice()};
@@ -128,22 +145,3 @@ function playGame(e) {
     nextRound();
 }
 
-function showComputerChoice(computerSelection) {
-    choiceImage = document.createElement("img");
-    choiceImage.setAttribute("id","choiceImage");
-    if (computerSelection == "rock"){
-        choiceImage.setAttribute("src","images/rock.webp");
-        choiceContainer.appendChild(choiceImage);
-    }else if (computerSelection == "paper"){
-        choiceImage.setAttribute("src","images/old-scroll-paper_108964-329.webp");
-        choiceContainer.appendChild(choiceImage);
-    }else {
-        choiceImage.setAttribute("src","images/istockphoto-1329468293-170667a.jpg");
-        choiceContainer.appendChild(choiceImage);
-    }
-}
-
-function hideComputerChoice(){
-    choiceImage = document.querySelector("#choiceImage");
-    choiceContainer.removeChild(choiceImage);
-}
