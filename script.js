@@ -12,7 +12,6 @@ buttons.forEach(button => button.addEventListener("click",playGame));
 
 function getComputerChoice() {
     let num = Math.floor(Math.random() * 3);
-    console.log(num);
     switch (num){
         case 0:
             return "rock";
@@ -135,6 +134,6 @@ function playGame(e) {
         buttons.forEach(button => button.removeEventListener("click",playGame));
         waitForRestart();
     };
-    nextRound();
+    if (i<5) {nextRound()};
 }
 

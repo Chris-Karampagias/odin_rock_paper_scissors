@@ -72,11 +72,6 @@ div{
     font-size: 40px;
 }
 
-#score {
-    display:flex;
-    justify-content: flex-start;
-}
-
 #roundResult,
 #result{
     color:red;
